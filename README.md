@@ -26,7 +26,7 @@ local perpendicular = require(perpendicularPath)
 local newFunction = perpendicular.desyncFunction("thisIsAFunction!")
 newFunction:run("return this string!")
 newFunction.completed:Connect(function(message)
-  print("newFunction has returned "..message)
+  print("newFunction has returned : "..message)
 end)
 ```
 
@@ -46,4 +46,4 @@ end)
 
 -- > Output
 
->return this string!
+>newFunction has returned : return this string!
