@@ -1,8 +1,9 @@
 # Perpendicular: Parallel LUAU Wrapper
 Takes advantage of the parallel luau feature on ROBLOX, intended for easy use. However easy, this module requires some pre-existing and extensive knowledge on Luau and Parallel Luau especially, I reccommend you check out [this youtube video, by Suphi Kaner,](https://www.youtube.com/watch?v=BbIPalpAfaI&ab_channel=SuphiKaner) if you are unfamiliar with the concept.
 
-Brief Overview:
-	New 'function instances' are made off of the perpendicular module which calls on the actorClass, actors are cached for a specified amount of time before they are eventually deleted. All optimizations (to my knowledge) have been made, however, if you spot any, feel free to let me know.
+**Brief Overview:**
+
+New 'function instances' are made off of the perpendicular module which calls on the actorClass, actors are cached for a specified amount of time before they are eventually deleted. All optimizations (to my knowledge) have been made, however, if you spot any, feel free to let me know.
 
 # DOCUMENTATION : ACTOR INSTANCE CREATION
 
