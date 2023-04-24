@@ -1,0 +1,5 @@
+return {
+	standing = {},
+	running = {},
+	all = {},
+}
