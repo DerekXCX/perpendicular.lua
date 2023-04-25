@@ -42,7 +42,7 @@ newFunction.completed:Connect(function(message)
 end)
 ```
 
--- > thisIsAFunction!
+-- > thisIsAFunction
 ```lua
 local runSignal = script.Parent:WaitForChild("runSignal")
 
