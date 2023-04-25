@@ -33,7 +33,7 @@ Fires as soon as the ran function returns a value.
 ```lua
 local perpendicular = require(perpendicularPath)
 
-local newFunction = perpendicular.desyncFunction("thisIsAFunction!")
+local newFunction = perpendicular.desyncFunction("thisIsAFunction")
 
 newFunction:run("return this string!")
 
