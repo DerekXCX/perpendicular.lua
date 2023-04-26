@@ -10,15 +10,13 @@ local Debris = game:GetService("Debris")
 
 --@constants
 local IN_CLIENT = RunService:IsClient()
+local EXHAUST_TIME = info.settings.actorExhaustTime
 
 local parentModule = script.Parent
 
 --@libraries
 local fastSignal = require(parentModule:WaitForChild("fastSignal"))
 local info = require(parentModule:WaitForChild("info"))
-
---@constants
-local exhaustTime = info.settings.actorExhaustTime
 
 --@instances
 local actorsFolder = nil
@@ -66,7 +64,7 @@ function actorClass.new(functionName)
 	self.functionListen.Event:Connect(function(pathway, ...)
 		if pathway ~= "finished" then return end
 		self.completed:Fire(...)
-		task.wait(exhaustTime) -- allow the actor to 'breathe'
+		task.wait(EXHAUST_TIME) -- allow the actor to 'breathe'
 		self:setActivity(false)
 	end)
 
