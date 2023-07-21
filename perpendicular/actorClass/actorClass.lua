@@ -1,22 +1,22 @@
---!strict
--- xcx_derek : 04/23/2023
--- Copyright (c) 2023 Derek
--- ACTOR CLASS
-
 --@services
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
+local HTTPS = game:GetService("HttpService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Debris = game:GetService("Debris")
+local ServerScriptService = game:GetService("ServerScriptService")
 
 --@constants
 local IN_CLIENT = RunService:IsClient()
-local EXHAUST_TIME = info.settings.actorExhaustTime
 
 local parentModule = script.Parent
 
 --@libraries
 local fastSignal = require(parentModule:WaitForChild("fastSignal"))
 local info = require(parentModule:WaitForChild("info"))
+
+--@constants
+local exhaustTime = info.settings.actorExhaustTime
 
 --@instances
 local actorsFolder = nil
