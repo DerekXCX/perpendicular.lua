@@ -34,9 +34,13 @@ local _moveActorInRegistry = require(parentModuleHelpers:WaitForChild("moveActor
 if IN_CLIENT then
 	local player = Players.LocalPlayer
 	local foundActorsFolder = player:FindFirstChild("PlayerScripts"):FindFirstChild("actors")
-	if not foundActorsFolder then actorsFolder = _newFolder(player:FindFirstChild("PlayerScripts"), "actors") end
+	if not foundActorsFolder then actorsFolder = _newFolder(player:FindFirstChild("PlayerScripts"), "actors") else actorsFolder = foundActorsFolder end
 else
-	actorsFolder = _newFolder(game:GetService("ServerScriptService"), "actors")
+	if ServerScriptService:FindFirstChild("actors") then
+		actorsFolder = ServerScriptService:FindFirstChild("actors")
+	else
+		actorsFolder = _newFolder(ServerScriptService, "actors")
+	end
 end
 
 --@export
