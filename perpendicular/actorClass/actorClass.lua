@@ -16,7 +16,7 @@ local fastSignal = require(parentModule:WaitForChild("fastSignal"))
 local info = require(parentModule:WaitForChild("info"))
 
 --@constants
-local exhaustTime = info.settings.actorExhaustTime
+local EXHAUST_TIME = info.settings.actorExhaustTime
 
 --@instances
 local actorsFolder = nil
